@@ -207,6 +207,7 @@ int HtDestroy(CC_HASH_TABLE** HashTable)
     }
 
     CC_HASH_TABLE* tab = *HashTable;
+    HtClear(tab);
     for (int i = 0; i < tab->capacity; i++)
         free(tab->array[i]);
     free(tab->array);
